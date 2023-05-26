@@ -1,11 +1,11 @@
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 
-import { Button } from '.';
-import { chatData } from '../data/dummy';
+import { Button } from '../main/Button';
+
 import { useStateContext } from '../ContextProvider';
 
-const Notificaciones = () => {
+export function Notificaciones(){
   const { currentColor } = useStateContext();
 
   return (
@@ -34,5 +34,3 @@ const Notificaciones = () => {
     </div>
   );
 };
-
-export default Notificaciones;

@@ -3,12 +3,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { Navbar, Footer, Sidebar, ConfigTema, } from './main';
-import { Formularios, Correo, Calendario, Encargados, Administradores, Informes, Tareas } from './components';
+import { Navbar } from './main/Navbar';
+import { Footer } from './main/Footer';
+import { Sidebar } from './main/Sidebar';
+import { ConfigTema } from './main/ConfigTema';
+
+
+import { Formularios } from './components/Formularios';
+import { Correo } from './components/Correo';
+import { Calendario } from './components/Calendario';
+import { Encargados } from './components/Encargados';
+import { Administradores } from './components/Administradores';
+import { Informes } from './components/Informes';
+import { Tareas } from './components/Tareas';
+
 import './App.css';
 import { useStateContext } from './ContextProvider';
 
-const App = () => {
+export default function App(){
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
 
   useEffect(() => {
@@ -87,5 +99,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
